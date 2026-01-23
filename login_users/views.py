@@ -11,8 +11,6 @@ def auth_view(request):
 
         nome = request.POST.get('nome')
         senha = request.POST.get('senha')
-        print(
-            f"🔵 Nome: {nome}, Senha recebida: {'*' * len(senha) if senha else 'None'}")
 
         # REGISTER
         if 'register' in request.POST:
@@ -40,7 +38,7 @@ def auth_view(request):
 
             try:
                 usuario = Usuarios.objects.get(nome_usuario=nome)
-                print(f"🟢 Usuário encontrado: {usuario.nome_usuario}")
+
             except Usuarios.DoesNotExist:
 
                 return render(
