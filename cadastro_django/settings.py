@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django_browser_reload',
     'login_users',
     'system',
-    'register_client'
+    'register_client',
+    'components',
 ]
 
 MIDDLEWARE = [

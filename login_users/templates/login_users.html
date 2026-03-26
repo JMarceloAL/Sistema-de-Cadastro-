@@ -9,19 +9,26 @@
     <link rel="stylesheet" href="{% static 'css/login/styles.css' %}">
 </head>
 <body>
+    <div class="layout_login">
+
+        <div class="login_box">   
     
-
-    <h2 class="login_title">Login / Registro</h2>
-    <form method="POST"> 
-        {% csrf_token %}
-
-        <input type="text" name="nome" placeholder="Nome de usuário" required>
-        <br><br>
-        <input type="password" name="senha" placeholder="Senha" required>
-        <br><br>
+            <h2 class="login_title">Login</h2>
+            <form method="POST"> 
+                {% csrf_token %}
         
-        <button type="submit" name="login">Login</button>
-        <button type="submit" name="register">Register</button>
-    </form>
+                <input  class="input_user" type="text" name="nome" placeholder="Nome de usuário" required>
+                <br><br>
+                <input  class="input_password"  type="password"  name="senha" placeholder="Senha" required>
+                <br><br>
+                
+                <button class="button_login" type="submit" name="login">Login</button>
+                <button class="button_register" type="submit" name="register">Register</button>
+            </form>
+    
+        </div>
+
+    </div>
+
 </body>
 </html>
